@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <style></style> -->
+  </head>
+  <body>
+    <p id="text" style="background-color: aqua; padding: 8px">This is Text</p>
+    <label for="username">Username:</label> <br />
+    <input type="text" id="username" value="Input text" /> <br />
+
+    <h4 id="get-heading">GET</h4>
+    <button id="show-text-btn">Show Text</button>
+    <button id="show-html-btn">Show Html</button>
+    <button id="show-value-btn">Show Value</button>
+    <button id="show-attribute-btn">Show Attr</button>
+
+    <h4 id="set-heading">SET</h4>
+    <button id="set-text-btn">Set Text</button>
+    <button id="set-html-btn">Set Html</button>
+    <button id="set-value-btn">Set Value</button>
+    <button id="set-attribute-btn">Set Attr</button>
+
+    <script>
+      $(document).ready(function () {
+        // GET
+        $("#show-text-btn").click(function () {
+          alert($("#text").text());
+        });
+
+        $("#show-html-btn").click(function () {
+          alert($("#text").html());
+        });
+
+        $("#show-value-btn").click(function () {
+          alert($("#username").val());
+        });
+
+        $("#show-attribute-btn").click(function () {
+          alert($("#text").attr("style"));
+        });
+
+        // SET
+
+        $("#set-text-btn").click(function () {
+          $("#text").text("Hello em");
+        });
+
+        $("#set-html-btn").click(function () {
+          $("#text").html("<h2>HAHAHAHA</h2>");
+        });
+
+        $("#set-value-btn").click(function () {
+          $("#username").val("new value");
+        });
+
+        $("#set-attribute-btn").click(function () {
+          $("#text").css("background-color", "green");
+        });
+
+        // ADD
+      });
+    </script>
+  </body>
+</html>
