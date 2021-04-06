@@ -1,0 +1,13 @@
+.container {
+  max-width: 1152px;
+  width: 90%;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 50%;
+  background-color: #36393f;
+}
