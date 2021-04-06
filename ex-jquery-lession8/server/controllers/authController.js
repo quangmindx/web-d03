@@ -4,6 +4,7 @@ function authController() {
   return {
     // Post login
     login(req, res) {
+      console.log(req.body);
       const { email, password } = req.body;
       const findUser = Users.find(
         (user) => user.email === email && user.password === password
